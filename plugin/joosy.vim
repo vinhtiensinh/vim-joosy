@@ -17,7 +17,6 @@ function <SID>JsyTemplate()
   let pageFile = substitute(pageFile, '.js.coffee', '.jst.hamlc', '')
   echo pageFile
   let pageFile = ':o ' . pageFile . "\<CR>"
-  echo pageFile
   call feedkeys(pageFile)
 endfunction
 
