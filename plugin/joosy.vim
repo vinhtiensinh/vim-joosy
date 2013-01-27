@@ -15,10 +15,11 @@ function <SID>JsyTemplate()
   let pageFile = substitute(pageFile, '/widgets/', '/templates/widgets/', '')
   let pageFile = substitute(pageFile, '/layouts/', '/templates/layouts/', '')
   let pageFile = substitute(pageFile, '.js.coffee', '.jst.hamlc', '')
+  echo pageFile
   let pageFile = ':o ' . pageFile . "\<CR>"
   echo pageFile
   call feedkeys(pageFile)
 endfunction
 
 command! JsyPage call <SID>JsyPage()
-command! JsyTemplate call <SID>JsyPage()
+command! JsyTemplate call <SID>JsyTemplate()
